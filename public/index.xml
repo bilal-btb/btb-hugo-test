@@ -24,10 +24,10 @@
     </item>
     <item>
       <title>About</title>
-      <link>https://example.org/about/</link>
+      <link>https://example.org/about/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/about/</guid>
-      <description>i&amp;rsquo;m learing hugo, one step at a time.</description>
+      <guid>https://example.org/about/about/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
