@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="container">
+  <h1>{{ .Params.title }}</h1>
+  <ul class="casestudy-listing-list">
+    {{ range .Pages }}
+    <li class="casestudy-listing-box">
+      <img src="{{ .Params.object.metadata.primaryimage.image.url }}">
+      <div class="casestudy-listing-box-headline-div">
+        <div>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <p>{{ .Date.Format "January 2, 2006" }}</p>
+        </div>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

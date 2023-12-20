@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{ with .Params.object }}
+<div class="about-hero-section">
+    <div class="container">
+        <h1>{{ .metadata.headline }}</h1>
+        <p>{{ .metadata.description }}</p>
+    </div>
+</div>
+<div class="about-body">
+    <div class="container">
+        <div class="container-sections">
+            <div class="left-section">
+                <div>{{ .metadata.body | safeHTML }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+{{ end }}

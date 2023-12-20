@@ -1,0 +1,78 @@
+{{ define "main" }}
+{{ $page := .Page }}
+{{ with .Params.object }}
+<div class="casestudy-hero-section">
+    <div class="container">
+        <h1>{{ .metadata.article.headline }}</h1>
+        <p>{{ .metadata.article.description }}</p>
+        <img class="featured-image" src="{{ .metadata.primaryimage.image.url }}" alt="Featured Image">
+        <p>{{ .metadata.primaryimage.caption }}</p>
+    </div>
+</div>
+<div class="casestudy-body">
+    <div class="container">
+        <div class="container-sections">
+            <div class="left-section">
+                <div>{{ .metadata.article.body | safeHTML }}</div>
+            </div>
+
+            <div class="right-section">
+                <h2>At a Glance</h2>
+                <p>Company</p>
+                <p>{{ .metadata.customer.companyname }}</p>
+                <hr />
+                <p>Location</p>
+                <p>{{ .metadata.customer.companylocation }}</p>
+                <hr />
+                <p>Website</p>
+                <p>{{ .metadata.customer.companyurl }}</p>
+                <hr />
+                <p>Company Size</p>
+                <p>{{ .metadata.customer.companysize }}</p>
+                <hr />
+                <p>Company Type</p>
+                <p>{{ .metadata.customer.companytype }}</p>
+                <hr />
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ if .metadata.article.takeaway }}
+<div class="casestudy-highlight-section">
+    <div class="container">
+        <h2 class="highlight-title">Takeaway</h2>
+        <hr />
+        {{ range .metadata.article.takeaway }}
+        <p class="highlight-header">{{ .headline | safeHTML }}</p>
+        <p>{{ .body | safeHTML }}</p>
+        {{ end }}
+        </p>
+    </div>
+</div>
+{{ end }}
+
+{{ if .metadata.related }}
+<div class="casestudy-related-section">
+    <div class="container">
+        <h2 class="related-title">Related</h2>
+        <hr />
+        <ul class="related-list">
+            {{ range .metadata.related }}
+            <li class="related-box">
+                {{ with $page.GetPage .slug }}
+                <a href="{{ .Permalink }}">
+                {{ end }}
+                    <img class="related-image" src="{{ .metadata.primaryimage.image.url }}" alt="Related Image">
+                    <div class="related-headline-div">
+                        <p>{{ .metadata.article.headline }}</p>
+                    </div>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}
+{{ end }}
+{{ end }}

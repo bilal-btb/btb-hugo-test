@@ -1,0 +1,6 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Be the Business | Prototype'
+# theme = 'ananke' #
+[params]
+name = 'Bilal'

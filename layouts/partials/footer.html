@@ -1,0 +1,13 @@
+{{ with .Params.hide_footer }}
+<!-- No footer here! -->
+{{ else }}
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <p>Be the Business is the trading name of The Productivity Group, a company limited by guarantee and
+                registered in England no. 10754958; registered charity 1173660 (England & Wales).</p>
+            <p>Copyright &copy; {{ now.Year }} Be the Business </p>
+        </div>
+    </div>
+</footer>
+{{ end }}

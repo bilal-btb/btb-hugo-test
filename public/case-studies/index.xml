@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Case Studies on Be the Business | Prototype</title>
+    <link>https://example.org/case-studies/</link>
+    <description>Recent content in Case Studies on Be the Business | Prototype</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/case-studies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I gained different perspectives from people who aren’t in my industry</title>
+      <link>https://example.org/case-studies/another-case-study/</link>
+      <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.org/case-studies/another-case-study/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>My board helped me to turn my mission into a real business</title>
+      <link>https://example.org/case-studies/example-case-study/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.org/case-studies/example-case-study/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
